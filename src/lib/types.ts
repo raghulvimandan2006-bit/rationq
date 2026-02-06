@@ -32,6 +32,7 @@ export type Booking = {
   slotTime: Date;
   otp: string;
   status: 'booked' | 'completed' | 'expired';
+  saleDate?: Date;
 };
 
 export type NavItem = {

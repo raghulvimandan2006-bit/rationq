@@ -62,6 +62,9 @@ export const users: RationUser[] = [
   },
 ];
 
+const yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+
 export const bookings: Booking[] = [
   {
     id: 'booking1',
@@ -75,8 +78,9 @@ export const bookings: Booking[] = [
     id: 'booking2',
     rationCardNumber: '1234567890',
     shopId: 'shop1',
-    slotTime: new Date(new Date().setHours(10, 0, 0, 0)),
+    slotTime: new Date(yesterday.setHours(10, 0, 0, 0)),
     otp: '5678',
     status: 'completed',
+    saleDate: yesterday,
   },
 ];

@@ -66,6 +66,15 @@ function SalePageContent() {
           quantity: item.quantity,
         });
       }
+
+      // In a real app, you would update the booking status in the database.
+      // Here we find the booking and update its status to 'completed'.
+      const bookingIndex = bookings.findIndex(b => b.id === bookingId);
+      if (bookingIndex !== -1) {
+          bookings[bookingIndex].status = 'completed';
+          bookings[bookingIndex].saleDate = new Date();
+      }
+
       // Mock frontend update
       setShops(prevShops =>
         prevShops.map(s => {
@@ -101,7 +110,7 @@ function SalePageContent() {
                 <CardDescription>The inventory has been updated. A bill has been sent to the customer's email.</CardDescription>
             </CardHeader>
             <CardContent>
-                <Button onClick={() => router.push('/shop/verify')}>Serve Next Customer</Button>
+                <Button onClick={() => router.push('/shop/sales')}>View Sales</Button>
             </CardContent>
         </Card>
     );
