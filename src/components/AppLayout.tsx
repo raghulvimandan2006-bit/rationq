@@ -22,6 +22,7 @@ interface AppLayoutProps {
   navItems: NavItem[];
   title: string;
   description: string;
+  headerActions?: React.ReactNode;
 }
 
 export default function AppLayout({
@@ -29,6 +30,7 @@ export default function AppLayout({
   navItems,
   title,
   description,
+  headerActions,
 }: AppLayoutProps) {
   const pathname = usePathname();
 
@@ -68,6 +70,7 @@ export default function AppLayout({
               <h1 className="text-lg font-semibold">{title}</h1>
               <p className="text-sm text-muted-foreground hidden md:block">{description}</p>
             </div>
+            {headerActions && <div>{headerActions}</div>}
           </header>
           <main className="flex-1 p-6">{children}</main>
         </SidebarInset>
