@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "wheat",
+      "description": "A bag of wheat grains",
+      "imageUrl": "https://images.unsplash.com/photo-1713272195609-93ca51c20062?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3aGVhdCUyMGdyYWluc3xlbnwwfHx8fDE3NzAzNjI4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wheat grains"
+    },
+    {
+      "id": "rice",
+      "description": "A bag of white rice",
+      "imageUrl": "https://images.unsplash.com/photo-1610663711502-35f870cfaea2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyaWNlJTIwZ3JhaW5zfGVufDB8fHx8MTc3MDM2Mjg0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rice grains"
+    },
+    {
+      "id": "sugar",
+      "description": "A bag of sugar",
+      "imageUrl": "https://images.unsplash.com/photo-1575650772417-e6b418b0d106?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3VnYXIlMjBjcnlzdGFsc3xlbnwwfHx8fDE3NzAzNjI4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sugar crystals"
+    },
+    {
+      "id": "oil",
+      "description": "A bottle of cooking oil",
+      "imageUrl": "https://images.unsplash.com/photo-1676751926100-ae4228ba0da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb29raW5nJTIwb2lsfGVufDB8fHx8MTc3MDM2Mjg0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cooking oil"
+    },
+    {
+      "id": "dal",
+      "description": "A bag of lentils",
+      "imageUrl": "https://images.unsplash.com/photo-1638378545909-d78bd9b4271c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsZW50aWxzfGVufDB8fHx8MTc3MDI3MzAxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lentils"
+    }
+  ]
 }
