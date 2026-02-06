@@ -3,14 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AppLayout from '@/components/AppLayout';
-import { Shield, Users, Warehouse } from 'lucide-react';
 import { Logo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { href: '/admin', label: 'Dashboard', icon: Shield },
-  { href: '/admin/shops', label: 'Shops', icon: Warehouse },
-  { href: '/admin/users', label: 'Users', icon: Users },
+  { href: '/admin', label: 'Dashboard', icon: 'shield' as const },
+  { href: '/admin/shops', label: 'Shops', icon: 'warehouse' as const },
+  { href: '/admin/users', label: 'Users', icon: 'users' as const },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

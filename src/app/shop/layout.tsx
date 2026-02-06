@@ -1,13 +1,10 @@
-'use client';
-
 import AppLayout from '@/components/AppLayout';
-import { ClipboardCheck, LayoutGrid, Package, ShoppingBag } from 'lucide-react';
 
 const navItems = [
-  { href: '/shop', label: 'Dashboard', icon: LayoutGrid },
-  { href: '/shop/verify', label: 'Verify Customer', icon: ClipboardCheck },
-  { href: '/shop/inventory', label: 'Inventory', icon: Package },
-  { href: '/shop/sales', label: 'Sales', icon: ShoppingBag },
+  { href: '/shop', label: 'Dashboard', icon: 'layout-grid' as const },
+  { href: '/shop/verify', label: 'Verify Customer', icon: 'clipboard-check' as const },
+  { href: '/shop/inventory', label: 'Inventory', icon: 'package' as const },
+  { href: '/shop/sales', label: 'Sales', icon: 'shopping-bag' as const },
 ];
 
 export default function ShopLayout({ children }: { children: React.ReactNode }) {

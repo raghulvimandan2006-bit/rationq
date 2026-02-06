@@ -1,4 +1,4 @@
-import type { LucideIcon } from 'lucide-react';
+import type { IconName } from '@/lib/icon-map';
 
 export type InventoryItem = {
   id: string;
@@ -38,5 +38,5 @@ export type Booking = {
 export type NavItem = {
   href: string;
   label: string;
-  icon: LucideIcon;
+  icon: IconName;
 };
