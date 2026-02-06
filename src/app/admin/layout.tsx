@@ -15,20 +15,20 @@ const navItems = [
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const [isClient, setIsClient] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [authStatus, setAuthStatus] = useState<'loading' | 'authenticated' | 'unauthenticated'>('loading');
 
   useEffect(() => {
-    setIsClient(true);
     try {
         const loggedIn = localStorage.getItem('admin_logged_in') === 'true';
-        if (!loggedIn) {
-          router.replace('/admin/login');
+        if (loggedIn) {
+          setAuthStatus('authenticated');
         } else {
-          setIsAuthenticated(true);
+          setAuthStatus('unauthenticated');
+          router.replace('/admin/login');
         }
     } catch (error) {
         console.error('Could not access localStorage', error);
+        setAuthStatus('unauthenticated');
         router.replace('/admin/login');
     }
   }, [router]);
@@ -39,11 +39,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     } catch (error) {
         console.error('Could not access localStorage', error);
     }
+    setAuthStatus('unauthenticated');
     router.replace('/admin/login');
   };
 
-  if (!isClient || !isAuthenticated) {
-    // You can show a loading spinner here
+  if (authStatus !== 'authenticated') {
+    // Show loader while loading or before redirecting
     return (
         <div className="flex min-h-screen items-center justify-center">
             <Logo className="h-16 w-16 text-primary animate-pulse" />
